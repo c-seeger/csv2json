@@ -39,7 +39,7 @@ func main() {
         path := flag.String("c", "./data.csv", "path of the file")
         output := flag.String("o", "./data.json", "path of the output file")
         flag.Parse()
-        fileBytes, err := csv2json.ReadCSV(path)
+        fileBytes, err := csv2json.ReadCSV(path, nil)
         if err != nil {
                 log.Fatal(err)
         }
