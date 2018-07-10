@@ -50,7 +50,7 @@ func main() {
 }
 ```
 
-run it by `go run test.go -c test.csv -o test.json` or use go build to create a binary
+run it by `go run test.go -c test.csv -o test.json` or use `go build` to create a binary
 
 ### Advanced examples
 
