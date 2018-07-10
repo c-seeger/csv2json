@@ -9,8 +9,8 @@ import (
 )
 
 func main() {
-	path := flag.String("c", "./csv/somename_19700101.csv", "path of the file")
-	output := flag.String("o", "./json/somename_19700101.json", "path of the output file")
+	path := flag.String("c", "./csv/somename_19700101.csv", "path to csv file")
+	output := flag.String("o", "./json/somename_19700101.json", "path to output file")
 	flag.Parse()
 
 	// parse info from filename and add them to json

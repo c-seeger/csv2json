@@ -9,8 +9,8 @@ import (
 
 func main() {
 	// define csv path and output path
-	csvPath := flag.String("c", "./csv/data.csv", "path of the file")
-	outputPath := flag.String("o", "./json/data.json", "path of the output file")
+	csvPath := flag.String("c", "./csv/data.csv", "path to csv file")
+	outputPath := flag.String("o", "./json/data.json", "path to output file")
 	flag.Parse()
 
 	// read and convert csv
