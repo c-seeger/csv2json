@@ -2,8 +2,6 @@
 
 is a [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) to [JSON](https://en.wikipedia.org/wiki/JSON) converter inspired by the work of [CSV-To-JSON-Converter](https://github.com/Ahmad-Magdy/CSV-To-JSON-Converter).
 
-The original project was not a library implementation so i encapsulated the code into the csv2json package and added some features to create a more usable version.
-
 This project was created by the intension to create json files from csv for importing the data into an ELK stack since JSON supports more options than CSV for ELK.
 
 ## Features
