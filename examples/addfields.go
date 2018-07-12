@@ -25,7 +25,7 @@ func main() {
 	addFields["filepath"] = *path
 
 	// adding some fields
-	fileBytes, err := csv2json.ReadCSV(path, addFields)
+	fileBytes, err := csv2json.ReadCSV(path, addFields, csv2json.Options{})
 	if err != nil {
 		log.Fatal(err)
 	}

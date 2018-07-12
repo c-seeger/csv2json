@@ -7,6 +7,7 @@ The original project was not a library implementation so i encapsulated the code
 ## Features
 - convert csv to json
 - adding additional fields that are not in the original csv file
+- options PrettyPrint and LineWiseJson
 
 ## Installation
 
@@ -39,7 +40,7 @@ func main() {
         path := flag.String("c", "./data.csv", "path of the file")
         output := flag.String("o", "./data.json", "path of the output file")
         flag.Parse()
-        fileBytes, err := csv2json.ReadCSV(path, nil)
+        fileBytes, err := csv2json.ReadCSV(path, nil, csv2json.Options{})
         if err != nil {
                 log.Fatal(err)
         }
