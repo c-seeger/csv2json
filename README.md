@@ -53,6 +53,27 @@ func main() {
 
 run it by `go run test.go -c test.csv -o test.json` or use `go build` to create a binary
 
+### Options
+
+There are some options available in the `csv2json.Options` struct:
+
+```
+type Options struct {
+        LineWiseJSON    bool
+        PrettyPrint     bool
+        QuoteEverything bool
+}
+```
+
+- LineWiseJSON
+ - creates a json line per csv line and concats all lines together in one file
+ - this feature is usefull if you want to generate JSON files from csv's as a data source for an ELK stack
+ - if this is set to false a jSON array with every line as an entry will be created 
+- PrettyPrint
+ - more readable multiline version of json
+- QuoteEverything
+ - ignores any kind of datatypes and quotes everything
+
 ### Advanced examples
 
 see [examples](https://github.com/cseeger-epages/csv2json/tree/master/examples) for some more usage examples
