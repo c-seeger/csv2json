@@ -15,7 +15,9 @@ func main() {
 
 	// read and convert csv
 	fileBytes, err := csv2json.ReadCSV(csvPath, nil, csv2json.Options{
-		LineWiseJson: true,
+		LineWiseJSON:    true, // create a json per line and concat all lines in one file instead of generating a json array
+		QuoteEverything: true, // ignores datatypes and quotes everything
+		PrettyPrint:     true, // pretty print (doenst make sense in combination with LineWiseJson but nevermind
 	})
 	if err != nil {
 		log.Fatal(err)

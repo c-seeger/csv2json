@@ -7,7 +7,7 @@ The original project was not a library implementation so i encapsulated the code
 ## Features
 - convert csv to json
 - adding additional fields that are not in the original csv file
-- options PrettyPrint and LineWiseJson
+- options PrettyPrint, QuoteEverything and LineWiseJSON
 
 ## Installation
 
