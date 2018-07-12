@@ -66,13 +66,13 @@ type Options struct {
 ```
 
 - LineWiseJSON
- - creates a json line per csv line and concats all lines together in one file
- - this feature is usefull if you want to generate JSON files from csv's as a data source for an ELK stack
- - if this is set to false a jSON array with every line as an entry will be created 
+  - creates a json line per csv line and concats all lines together in one file
+  - this feature is usefull if you want to generate JSON files from csv's as a data source for an ELK stack
+  - if this is set to false a jSON array with every line as an entry will be created 
 - PrettyPrint
- - more readable multiline version of json
+  - more readable multiline version of json
 - QuoteEverything
- - ignores any kind of datatypes and quotes everything
+  - ignores any kind of datatypes and quotes everything
 
 ### Advanced examples
 
