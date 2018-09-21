@@ -60,9 +60,9 @@ func intoJSONArray(content [][]string, additionalFields map[string]string, opt O
 	buffer.WriteString(`]`)
 	rawMessage := json.RawMessage(buffer.String())
 	if opt.PrettyPrint {
-		return json.MarshalIndent(rawMessage, "", "  ")
+		return json.MarshalIndent(&rawMessage, "", "  ")
 	}
-	return json.Marshal(rawMessage)
+	return json.Marshal(&rawMessage)
 }
 
 func lineWiseJSON(content [][]string, additionalFields map[string]string, opt Options) ([]byte, error) {
@@ -115,12 +115,12 @@ func lineWiseJSON(content [][]string, additionalFields map[string]string, opt Op
 		buffer.WriteString("}")
 		rawMessage := json.RawMessage(buffer.String())
 		if opt.PrettyPrint {
-			js, err = json.MarshalIndent(rawMessage, "", "  ")
+			js, err = json.MarshalIndent(&rawMessage, "", "  ")
 			if err != nil {
 				return nil, err
 			}
 		} else {
-			js, err = json.Marshal(rawMessage)
+			js, err = json.Marshal(&rawMessage)
 			if err != nil {
 				return nil, err
 			}
