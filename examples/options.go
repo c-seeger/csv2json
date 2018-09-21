@@ -13,8 +13,12 @@ func main() {
 	outputPath := flag.String("o", "./json/data.json", "path to output file")
 	flag.Parse()
 
+	fh, err := csv2json.ReadFile(csvPath)
+	if err != nil {
+		log.Fatal(err)
+	}
 	// read and convert csv
-	fileBytes, err := csv2json.ReadCSV(csvPath, nil, csv2json.Options{
+	fileBytes, err := csv2json.ReadCSV(fh, nil, csv2json.Options{
 		LineWiseJSON:    true, // create a json per line and concat all lines in one file instead of generating a json array
 		QuoteEverything: true, // ignores datatypes and quotes everything
 		PrettyPrint:     true, // pretty print (doenst make sense in combination with LineWiseJson but nevermind

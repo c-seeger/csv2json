@@ -8,11 +8,7 @@ import (
 )
 
 // ReadCSV to read the content of CSV File
-func ReadCSV(path *string, additionalFields map[string]string, opt Options) ([]byte, error) {
-	csvFile, err := os.Open(*path)
-	if err != nil {
-		return nil, err
-	}
+func ReadCSV(csvFile *os.File, additionalFields map[string]string, opt Options) ([]byte, error) {
 	defer csvFile.Close()
 
 	reader := csv.NewReader(csvFile)
@@ -34,4 +30,13 @@ func ReadCSV(path *string, additionalFields map[string]string, opt Options) ([]b
 // SaveFile creates a file by a given content and path
 func SaveFile(content []byte, path string) error {
 	return ioutil.WriteFile(path, content, os.FileMode(0644))
+}
+
+// ReadFile reads a file and creates a file handle
+func ReadFile(path *string) (*os.File, error) {
+	csvFile, err := os.Open(*path)
+	if err != nil {
+		return nil, err
+	}
+	return csvFile, nil
 }

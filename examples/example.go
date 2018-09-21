@@ -14,7 +14,11 @@ func main() {
 	flag.Parse()
 
 	// read and convert csv
-	fileBytes, err := csv2json.ReadCSV(csvPath, nil, csv2json.Options{})
+	fh, err := csv2json.ReadFile(csvPath)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fileBytes, err := csv2json.ReadCSV(fh, nil, csv2json.Options{})
 	if err != nil {
 		log.Fatal(err)
 	}
