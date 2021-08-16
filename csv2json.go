@@ -3,9 +3,15 @@ package csv2json
 import (
 	"encoding/csv"
 	"fmt"
-	"io/ioutil"
 	"os"
 )
+
+// Options to controll the json generation
+type Options struct {
+	LineWiseJSON    bool
+	PrettyPrint     bool
+	QuoteEverything bool
+}
 
 // ReadCSV to read the content of CSV File
 func ReadCSV(csvFile *os.File, additionalFields map[string]string, opt Options) ([]byte, error) {
@@ -25,18 +31,4 @@ func ReadCSV(csvFile *os.File, additionalFields map[string]string, opt Options) 
 		return lineWiseJSON(content, additionalFields, opt)
 	}
 	return intoJSONArray(content, additionalFields, opt)
-}
-
-// SaveFile creates a file by a given content and path
-func SaveFile(content []byte, path string) error {
-	return ioutil.WriteFile(path, content, os.FileMode(0644))
-}
-
-// ReadFile reads a file and creates a file handle
-func ReadFile(path *string) (*os.File, error) {
-	csvFile, err := os.Open(*path)
-	if err != nil {
-		return nil, err
-	}
-	return csvFile, nil
 }
