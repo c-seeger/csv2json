@@ -4,7 +4,7 @@
 [![GoDoc](https://img.shields.io/badge/godoc-reference-green.svg)](https://godoc.org/github.com/c-seeger/csv2json)
 [![Go Report Card](https://goreportcard.com/badge/github.com/c-seeger/csv2json)](https://goreportcard.com/report/github.com/c-seeger/csv2json)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/c-seeger/csv2json/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/c-seeger/csv2json.svg?branch=master)](https://travis-ci.org/c-seeger/csv2json)
+[![Build Status](https://travis-ci.com/c-seeger/csv2json.svg?branch=master)](https://travis-ci.com/c-seeger/csv2json)
 [![Built with Mage](https://magefile.org/badge.svg)](https://magefile.org)
 
 is a [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) to [JSON](https://en.wikipedia.org/wiki/JSON) converter inspired by the work of [CSV-To-JSON-Converter](https://github.com/Ahmad-Magdy/CSV-To-JSON-Converter).
